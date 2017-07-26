@@ -28,7 +28,7 @@ Softwares:
   Create new class derived from DBContext like follows: (just example)
            public class PolicyContext : DbContext
            {
-                public PolicyContext() : base("MydbConn")  <= this is very important to create Database.
+                public PolicyContext() : base("MydbConn")  
                 {
 
                 }
