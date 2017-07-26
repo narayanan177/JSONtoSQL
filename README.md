@@ -26,6 +26,8 @@ Softwares:
         Make sure we set proper name, before we proceed further - this will help for referring table.
   
   Create new class derived from DBContext like follows: (just example)
+  
+  
            public class PolicyContext : DbContext
            {
                 public PolicyContext() : base("MydbConn")  
@@ -42,6 +44,7 @@ Softwares:
               public Section[] SectionInfo { get; set; }
               public Endorsement[] Recommendations {get; set; }
            }
+           
   
   Then in main program, make sure we set ID value set properly.
    using (var ctx = new PolicyContext())
