@@ -79,4 +79,6 @@ Softwares:
   We can use this model to load unstructure data into SQL DB either using simple App or SSIS packages or any standard ETL process.
   
   
-  
+  Note:
+  Just in case, if we get new attribute comes in JSON input, we need to make changes in class to save that field in DB. 
+
