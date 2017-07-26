@@ -53,6 +53,7 @@ Softwares:
   Create new class derived from DBContext like follows: (just example)
   
   
+  
            public class PolicyContext : DbContext
            {
                 public PolicyContext() : base("MydbConn")  
@@ -72,6 +73,7 @@ Softwares:
            
   
   Then in main program, make sure we set ID value set properly.
+  
   
    using (var ctx = new PolicyContext())
             {
