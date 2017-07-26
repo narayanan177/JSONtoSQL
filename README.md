@@ -15,9 +15,13 @@ Softwares:
  Create new Class - i.e generated using JSON to C# object.
  Place JSON file in path
  Read the JSON file like
+ 
              var fileData = File.ReadAllText("path of JSON file");
+             
  Deserialize Object using JSON.NET like
+ 
              var jsonData = JsonConvert.DeserializeObject<Rootobject>(fileData);
+             
   Now it is simple of C# object, we can acess property and save data into DB.
   
   As a next step we need to design SQL Database
@@ -47,6 +51,7 @@ Softwares:
            
   
   Then in main program, make sure we set ID value set properly.
+  
    using (var ctx = new PolicyContext())
             {
                   Step 1:
@@ -55,13 +60,16 @@ Softwares:
                        ctx.Policy.Add(policy);
                         ctx.SaveChanges();
             }
+            
 
   In App.config, make sure - to give proper connectionstring
+  
     <connectionStrings>
     <add name="MydbConn"
     connectionString="Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=PoliciesDataDB;Integrated Security=true"
     providerName="System.Data.SqlClient"/>
   </connectionStrings>
+  
   
   Then access the DB and verify all data is in.
   Delete [dbo].[__MigrationHistory] table, this is not required.
