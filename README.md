@@ -30,9 +30,20 @@ Softwares:
  
  
   Now it is simple of C# object, we can acess property and save data into DB.
+  
   As a next step we need to design SQL Database
+  
   Before getting into DB, we need to make sure name of class generated are proper, so that Table design will adhere to standards.
+  
+  Note: - In Model class, i.e generated class contains array like this - 
+  
+        public SetData[] set { get; set; }
+        
+                Convert like below
+                        public ICollection<SetData> set { get; set; }
+  
   Review each class, add new int property as "ID" wherever we don't have ID,
+  
   Make sure we set proper name, before we proceed further - this will help for referring table.
   
   
